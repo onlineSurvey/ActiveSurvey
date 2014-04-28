@@ -10,7 +10,11 @@ $username = 'survey';
 $password= 'root';
 $db = new PDO($dsn, $username, $password);
 	
+<<<<<<< HEAD
 	if(isset($_POST['btnsubmit']))
+=======
+	if(isset($_POST['btnok']))
+>>>>>>> e861b431cede3bfdbc79c950e19ec96fc5bc71b1
 	{
 	$id=$_POST['id'];
 	$first_name=$_POST["txtFirstname"];
@@ -29,13 +33,21 @@ $db = new PDO($dsn, $username, $password);
 	if($records)
 	{
 		$_SESSION['msg']="Profile is updated successfully";
+<<<<<<< HEAD
 		header("Location:login_db.php");
+=======
+		header("Location:editform.php");
+>>>>>>> e861b431cede3bfdbc79c950e19ec96fc5bc71b1
 		echo"hello1";
 	}	
 	else
 	{
 		$_SESSION['err_msg']="a error has been occured";
+<<<<<<< HEAD
 		header("Location:login_db.php");
+=======
+		header("Location:editform.php");
+>>>>>>> e861b431cede3bfdbc79c950e19ec96fc5bc71b1
 	}	
 ?>
 	

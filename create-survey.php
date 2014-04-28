@@ -1,5 +1,9 @@
 <!----File name:create-survey.php--->
+<<<<<<< HEAD
 <!-----Author's name:Gurneet Saggu--->
+=======
+<!-----Author's name:Paras Sharma--->
+>>>>>>> e861b431cede3bfdbc79c950e19ec96fc5bc71b1
 <!-----Website Name:VGP Site Survey--->
 <!-----http://localhost/Final%20Project/create-survey.php---->
 <!-----File Description:This is the login file of creating survey--->

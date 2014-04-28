@@ -24,7 +24,11 @@ $db = new PDO($dsn, $username, $password);
 			<ul>
 				<li><a href="index.php">Home Page</a>
 				<li><a href="create-survey.php">Create Survey</a>
+<<<<<<< HEAD
 				<li><a href="response.php">Response Survey</a></li>
+=======
+				<li><a href="take-survey.php">Response Survey</a></li>
+>>>>>>> e861b431cede3bfdbc79c950e19ec96fc5bc71b1
 				<li><a href="registration.php">Registration</a></li>
 				<li><a href="https://github.com/onlineSurvey/ActiveSurvey">Git Hub</a></li>
 			</ul> 
