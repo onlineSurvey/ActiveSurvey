@@ -1,5 +1,5 @@
 <!----File name:Business_Contacts_Link_db.php--->
-<!----Author's name:Varin Upadhyay--->
+<!-----Author's name:Gurneet Saggu / Varin Upadhyay / Paras sharma--->
 <!----File Description: This is the database file of Business_Contacts_Link.--->
 <?php
 session_start();

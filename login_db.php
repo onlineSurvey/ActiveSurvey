@@ -1,5 +1,5 @@
 <!----File name:index.html.--->
-<!-----Author's name:Varin Upadhyay--->
+<!-----Author's name:Gurneet Saggu / Varin Upadhyay / Paras sharma--->
 <!-------http://localhost/Project/index.html ---->
 <!-------File Description: This is the index file of this project--->
 <?php
@@ -8,20 +8,12 @@ session_start();
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/Style.css">
-<script type="text/javascript">
-
-var image1 = new Image()
-image1.src ="image/varin2.jpg";
-var image2 = new Image()
-image2.src ="image/Varin.jpg";
-var image3 = new Image()
-image3.src ="image/varin1.jpg";
-
-</script>
+<script src="js/javascript.js"></script> 
 	<title>Online Survey</title>
+</head>
 <body>
 	<div id="container1">
-		<!----nav---->
+			<!----nav---->
 		<nav>
 			<ul >
 				<li><a href="index.php">Home Page</a>
@@ -142,3 +134,5 @@ image3.src ="image/varin1.jpg";
 				header("location:index.php");
 			}
 		?>
+	</body>
+</html>

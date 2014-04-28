@@ -1,31 +1,22 @@
 <!----File name:index.html.--->
-<!-----Author's name:Varin Upadhyay--->
+<!-----Author's name:Gurneet Saggu / Varin Upadhyay / Paras sharma--->
 <!-------http://localhost/Project/index.html ---->
 <!-------File Description: This is the index file of this project--->
 <?php
 session_start();
 $dsn= 'mysql:host=localhost;dbname=online_survey';
-
 $username = 'survey';
 $password= 'root';
-
 $db = new PDO($dsn, $username, $password);
 ?>
+
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="css/Style.css">
-<script type="text/javascript">
-
-var image1 = new Image()
-image1.src ="image/varin2.jpg";
-var image2 = new Image()
-image2.src ="image/Varin.jpg";
-var image3 = new Image()
-image3.src ="image/varin1.jpg";
-
-</script>
-	<title>Online Survey</title>
-<body>
+ <head>
+  <link rel="stylesheet" type="text/css" href="css/Style.css">
+  <script src="js/javascript.js"></script>  
+  <title>Online Survey</title>
+ </head>	
+ <body>
 	<div id="container1">
 		<!----nav---->
 		<nav>
@@ -74,15 +65,7 @@ image3.src ="image/varin1.jpg";
 	
 		<!---footer---->
 		<footer>		
-		<div class="img">
-			<a target="_blank" href="https://twitter.com"><img src="image/twitter.png" alt="Klematis"></a>
-			<a target="_blank" href="https://ca.linkedin.com/"><img src="image/linkedin.png" alt="Klematis"></a>
-			<a target="_blank" href="http://www.youtube.com/"><img src="image/youtube.png" alt="Klematis"></a>
-			<a target="_blank" href="https://www.facebook.com/"><img src="image/facebook.png" alt="Klematis"></a>
-		</div>
-	
-		<div id="copyright">Copyright By:Varin Upadhyay, Gurneet Saggu and Paras Shrama</div>
+		  <div id="copyright">Copyright By:Varin Upadhyay, Gurneet Saggu and Paras Shrama</div>
 		</footer>
-</body>
-</html>
+  </body>
 </html>

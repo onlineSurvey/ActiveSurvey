@@ -18,12 +18,15 @@
  ?>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="css/Style.css">
+    <script src="js/javascript.js"></script> 
 	<title>Entry Form</title>
 </head>
 <body>
 			<form action="edit_process.php" method="post">
 			<input type="hidden" name="id" value="<?php echo $row[0];?>"/>
-			Firstname:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="txtFirstname" value="<?php echo $row[1];?>">
+			Firstname:&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" name="txtFirstname" value="<?php echo $row[1];?>">
 				<?php
 				if(isset($_SESSION['err_firstname']))
 				{
@@ -32,8 +35,8 @@
 				}
 				?>
 				<br/><br/>
-				Lastname&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="text" name="txtLastname" value="<?php echo $row[2];?>">
+			Lastname&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" name="txtLastname" value="<?php echo $row[2];?>">
 				<?php
 				if(isset($_SESSION['err_lastname']))
 				{
@@ -201,9 +204,7 @@
 			unset ($_SESSION['msg']);
 		}
 	?>
-	<?php
-		include 'dbform.php';
-	?>
+	
 
 </body>
 </html>
