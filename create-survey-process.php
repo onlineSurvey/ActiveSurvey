@@ -79,6 +79,7 @@ session_start();
 		        }
 			}
 	
+
 			else
 			{
 				$_SESSION["isloggedin"] == false;
@@ -92,7 +93,6 @@ session_start();
 	</div>
 		<!---footer---->
 		<footer>		
-	
 		<div id="copyright">Copyright By:Varin Upadhyay, Gurneet Saggu and Paras Shrama</div>
 		</footer>
 </body>
