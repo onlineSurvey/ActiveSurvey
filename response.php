@@ -1,38 +1,38 @@
-<!----File name:index.html.--->
-<!-----Author's name:Gurneet Saggu / Varin Upadhyay / Paras sharma--->
-<!-------http://localhost/Project/index.html ---->
-<!-------File Description: This is the index file of this project--->
+<!----File name:response.php--->
+<!----Author's name:Varin Upadhyay------>
+<!-----Website Name:VGP Site Survey--->
+<!----http://localhost/Final%20Project/response.php ---->
+<!----File Description: This page is link to the database--->
 <?php
 session_start();
 $dsn= 'mysql:host=localhost;dbname=online_survey';
+
 $username = 'survey';
 $password= 'root';
+
 $db = new PDO($dsn, $username, $password);
 ?>
-
 <html>
- <head>
-  <link rel="stylesheet" type="text/css" href="css/Style.css">
-  <script src="js/javascript.js"></script>  
-  <title>Online Survey</title>
- </head>	
- <body>
+<head>
+<link rel="stylesheet" type="text/css" href="css/Style.css">
+	<title>Online Survey</title
+</head>
+<body>
 	<div id="container1">
 		<!----nav---->
 		<nav>
-			<ul >
+			<ul>
 				<li><a href="index.php">Home Page</a>
-				<li><a href="create-syrvey.php">Create Survey</a>
+				<li><a href="create-survey.php">Create Survey</a>
 				<li><a href="take-survey.php">Response Survey</a></li>
 				<li><a href="registration.php">Registration</a></li>
-				<li><a href="survey-response.php">Survey Response</a></li>
 				<li><a href="https://github.com/Varin6033/Business-Contact-List">Git Hub</a></li>
 			</ul> 
 		</nav>	
 		
 		<!----header---->
 		<header>
-			<image id="logo" src="image/surveys_and_polls.jpg"></img>
+			<image id="logo" src="image/logo.png"></img>
 		</header>
 		
 		<div class="container">
@@ -54,18 +54,20 @@ $db = new PDO($dsn, $username, $password);
 						<li><h4><a href="response_db.php?questions_id=1 ">Survey On this website</a></h4></li>
 					</ul>
 					</form>
-			</div>
-
-		<section id="content">
-			<div class="inside">
-				
-		</section>
+					<?php
+						if(isset($_SESSION['msg']))
+						{
+							echo $_SESSION['msg'];
+							unset ($_SESSION['msg']);
+						}
+					?>
 		</div>
-	</div>
+		</div>	
 	
 		<!---footer---->
 		<footer>		
-		  <div id="copyright">Copyright By:Varin Upadhyay, Gurneet Saggu and Paras Shrama</div>
+		<div id="copyright">Copyright By:Varin Upadhyay, Gurneet Saggu and Paras Shrama</div>
 		</footer>
-  </body>
+		
+</body>
 </html>

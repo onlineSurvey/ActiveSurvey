@@ -1,6 +1,7 @@
-<!----File name:Business_Contacts_Link_db.php--->
-<!-----Author's name:Gurneet Saggu / Varin Upadhyay / Paras sharma--->
-<!----File Description: This is the database file of Business_Contacts_Link.--->
+<!----File name:response.php--->
+<!----Author's name:Varin Upadhyay--->
+<!-----Website Name:VGP Site Survey--->
+<!----File Description: This is the database file of registration process.--->
 <?php
 session_start();
 $dsn= 'mysql:host=localhost;dbname=online_survey';
@@ -24,14 +25,17 @@ $db = new PDO($dsn, $username, $password);
 		if($first_name=="")
 		{
 			$_SESSION['err_firstname']='please enter the firstname';
+			header("Location:registration.php");
 		}
 		else
 		{
 			$_SESSION['firstname']=$first_name;
+			
 		}
 		if($last_name=="")
 		{
 			$_SESSION['err_lastname']='please enter the last name';
+			header("Location:registration.php");
 		}
 		else
 		{
@@ -40,6 +44,7 @@ $db = new PDO($dsn, $username, $password);
 		if($date_of_birth=="")
 		{
 			$_SESSION['err_dateofbirth']='please enter the birth-date';
+			header("Location:registration.php");
 		}
 		else
 		{
@@ -48,6 +53,7 @@ $db = new PDO($dsn, $username, $password);
 		if($username=="")
 		{
 			$_SESSION['err_username']='please enter the username';
+			header("Location:registration.php");
 		}
 		else
 		{
@@ -56,6 +62,7 @@ $db = new PDO($dsn, $username, $password);
 		if($password=="")
 		{
 			$_SESSION['err_password']='please enter the password';
+			header("Location:registration.php");
 		}
 		else
 		{
@@ -64,6 +71,7 @@ $db = new PDO($dsn, $username, $password);
 		if($email_id=="")
 		{
 			$_SESSION['err_EmailID']='please enter the emailid';
+			header("Location:registration.php");
 		}
 		else
 		{
@@ -72,6 +80,7 @@ $db = new PDO($dsn, $username, $password);
 		if($phone_no=="")
 		{
 			$_SESSION['err_Phoneno']='please enter the phoneno';
+			header("Location:registration.php");
 		}
 		else
 		{
@@ -80,6 +89,7 @@ $db = new PDO($dsn, $username, $password);
 		if($address=="")
 		{
 			$_SESSION['err_Address']='please enter the Address';
+			header("Location:registration.php");
 		}
 		else
 		{
@@ -88,6 +98,7 @@ $db = new PDO($dsn, $username, $password);
 		if($city=="")
 		{
 			$_SESSION['err_city']='please enter the city';
+			header("Location:registration.php");
 		}
 		else
 		{
@@ -96,25 +107,26 @@ $db = new PDO($dsn, $username, $password);
 		if($postal_code=="")
 		{
 			$_SESSION['err_postalcode']='please enter the postal code';
+			header("Location:registration.php");
 		}
 		else
 		{
 			$_SESSION['postalcode']=$postal_code;
 		}
 		
-		$query = "insert into `users` values('null','$first_name','$last_name','$date_of_birth','$username','$password','$email_id','$phone_no','$city','$address','$posatal_code')";
+		$query = "insert into `users` values('null','$first_name','$last_name','$date_of_birth','$username','$password','$email_id','$phone_no','$city','$address','$postal_code')";
 		$records = $db->query($query);
 		
 		if($records)
 		{
-			
 			$_SESSION['msg']="You are registered successfully ";
+			header("Location:index.php");
 		}
 		else
 		{
 			$_SESSION['err_msg']="a error has been occured";
 		}
 		mysql_close($link);
-		header("Location:index.php");
+		
 		die();
 ?>

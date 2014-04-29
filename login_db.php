@@ -1,33 +1,32 @@
 <!----File name:index.html.--->
-<!-----Author's name:Gurneet Saggu / Varin Upadhyay / Paras sharma--->
-<!-------http://localhost/Project/index.html ---->
-<!-------File Description: This is the index file of this project--->
+<!----Author's name:Gurneet Saggu----->
+<!-----Website Name:VGP Site Survey--->
+<!----http://localhost/Final%20Project/login_db.php ---->
+<!----File Description:This is the user profile page------>
 <?php
 session_start();
 ?>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/Style.css">
-<script src="js/javascript.js"></script> 
 	<title>Online Survey</title>
-</head>
+	</head>
 <body>
 	<div id="container1">
-			<!----nav---->
+		<!----nav---->
 		<nav>
 			<ul >
 				<li><a href="index.php">Home Page</a>
-				<li><a href="create-syrvey.php">Create Survey</a>
+				<li><a href="create-survey.php">Create Survey</a>
 				<li><a href="response.php">Response Survey</a></li>
 				<li><a href="registration.php">Registration</a></li>
-				<li><a href="response.php">Survey Response</a></li>
 				<li><a href="https://github.com/Varin6033/Business-Contact-List">Git Hub</a></li>
 			</ul> 
 		</nav>	
 		
 		<!----header---->
 		<header>
-			<image id="logo" src="image/surveys_and_polls.jpg"></img>
+			<image id="logo" src="image/logo.png"></img>
 		</header>
 		
 		<div class="container">
@@ -46,7 +45,7 @@ session_start();
 			$username = 'survey';
 			$password= 'root';
 			$db = new PDO($dsn, $username, $password);
-			//this section of code logs out the user
+			
 			if(isset($_GET["login"]))
 			{
 			if($_GET["login"])
@@ -69,14 +68,14 @@ session_start();
 				$pass = $row['password']; 
 				$userfound = true;
 			}
-
+			/*This portion retrieve the records of user from database--->*/
 			if($userfound)
 			{
 				if($password == $pass)
 				{
 					$_SESSION["isloggedin"] = true;
 					$_SESSION["username"] = $username;
-					echo "welcome: " . $_SESSION["username"];
+					echo "welcome: " . $_SESSION["username"];?><h1><a href="logout.php">Logout</a></h1><?php
 		            echo"<br/>"."<br/>";
 					$query= "select * from `users` where username = '".$username."' and  password = '".$password."'"; 
 					$records = $db->query($query);
@@ -133,6 +132,10 @@ session_start();
 				$_SESSION['err_msg']='Please enter the username and password';
 				header("location:index.php");
 			}
-		?>
-	</body>
+		?>	
+		</div>
+		</section>
+		</div>
+	</div>
+ </body>
 </html>

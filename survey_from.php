@@ -1,32 +1,33 @@
-<!----File name:registration.php--->
-<!----Author's name:Varin Upadhyay--->
-<!-----Website Name:VGP Site Survey--->
-<!----http://localhost/Final%20Project/registration.php---->
-<!----File Description: This page is the registration page for the new user.--->
+<!----File name:index.html.--->
+<!-----Author's name:Varin Upadhyay--->
+<!-------http://localhost/Project/index.html ---->
+<!-------File Description: This is the index file of this project--->
 <?php
 session_start();
 ?>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/Style.css">
+
 	<title>Online Survey</title>
-</head>
+	</head>
 <body>
 	<div id="container1">
 		<!----nav---->
 		<nav>
 			<ul >
 				<li><a href="index.php">Home Page</a>
-				<li><a href="create-survey.php">Create Survey</a>
+				<li><a href="create-syrvey.php">Create Survey</a>
 				<li><a href="response.php">Response Survey</a></li>
 				<li><a href="registration.php">Registration</a></li>
+				<li><a href="response.php">Survey Response</a></li>
 				<li><a href="https://github.com/Varin6033/Business-Contact-List">Git Hub</a></li>
 			</ul> 
 		</nav>	
 		
 		<!----header---->
 		<header>
-			<image id="logo" src="image/logo.png"></img>
+			<image id="logo" src="image/surveys_and_polls.jpg"></img>
 		</header>
 		
 		<div class="container">
@@ -70,7 +71,7 @@ session_start();
 				<?php 
 				for($i=1960;$i<=2013;$i++)
 				{?>
-					<option value=""><?php echo $i; ?></option>
+					<option value""><?php echo $i; ?></option>
 				<?php	}?>
 				</select>
 				<select name="txtmonth" id="txtmonth" >
@@ -78,7 +79,7 @@ session_start();
 				<?php 
 				for($i=1;$i<=12;$i++)
 				{?>
-					<option value=""><?php echo $i; ?></option>
+					<option value""><?php echo $i; ?></option>
 				<?php } ?>
 				</select>
 				<select name="txtday" id="txtday" >
@@ -86,7 +87,7 @@ session_start();
 				<?php 
 				for($i=1;$i<=31;$i++)
 				{?>
-				<option value=""><?php echo $i; ?></option>
+				<option value""><?php echo $i; ?></option>
 				<?php } ?>
 				</select>
 			    
@@ -162,7 +163,7 @@ session_start();
 				?>
 				<br/>
 				<input type="submit" value="submit" name="btnsubmit">
-				</form>
+			</form>
 				<?php
 				if(isset($_SESSION['err_msg']))
 				{
@@ -179,5 +180,5 @@ session_start();
 		<footer>		
 		<div id="copyright">Copyright By:Varin Upadhyay, Gurneet Saggu and Paras Shrama</div>
 		</footer>
-</body>
+ </body>
 </html>

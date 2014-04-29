@@ -1,8 +1,3 @@
-/*---------------------------------Author: Gurneet Saggu,Varin,Paras sharma 
-                                   File: stylesheet.css
-                                   css file applying different attributes on the site content
-                                   css File-----------------------------------*/
-								   
 body
 {
 	font-size:100%;
@@ -259,44 +254,5 @@ footer p
 	padding-top:91px;
 	text-align:center;
 }
-#keep_connected
-{
-	border-width:2px;
-	border-style:solid;
-	border-color:#000033;
-	border-radius:20px;
-	margin-top:0px;
-	margin-left:750px;
-	padding:0px;
-	width:550px;
-	height:50px;
-}
-#keep_connected li
-{
-	 float:left;
-	 line-height:0.2em;
-	 width:200px;
-	 
-}
-#keep_connected  li a
-{
-	display:block;
-	height:10px;
-	padding:6px 5px 0px 5px;
-	color:black;
-	
-}
-div.img
-{
-	height:35px;
-	width: 115px;
-	margin:5px;
-	padding-top:50px;
-	padding-left:1205px;
-	float:left;
-	text-align:center;
-	display:inline;
-	border:1px solid grey;
-	border-radius:20px;
-}
-/*footer css start*/
+
+

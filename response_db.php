@@ -1,7 +1,8 @@
-<!----File name:index.html.--->
-<!-----Author's name:Gurneet Saggu / Varin Upadhyay / Paras sharma--->
-<!-------http://localhost/Project/index.html ---->
-<!-------File Description: This is the index file of this project--->
+<!-----File name:response_db.php--->
+<!-----Author's name:Varin Upadhyay--->
+<!-----Website Name:VGP Site Survey--->
+<!-----http://localhost/Final%20Project/response_db.php---->
+<!-----File Description:This page provides the survey on this website--->
 <?php
 session_start();
 $dsn= 'mysql:host=localhost;dbname=online_survey';
@@ -13,27 +14,25 @@ $db = new PDO($dsn, $username, $password);
 ?>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="css/Style.css">
-  <script src="js/javascript.js"></script> 
+<link rel="stylesheet" type="text/css" href="css/Style.css">
 	<title>Online Survey</title>
-</head>
+</head>	
 <body>
 	<div id="container1">
 		<!----nav---->
 		<nav>
-			<ul >
+			<ul>
 				<li><a href="index.php">Home Page</a>
-				<li><a href="create-syrvey.php">Create Survey</a>
+				<li><a href="create-survey.php">Create Survey</a>
 				<li><a href="take-survey.php">Response Survey</a></li>
 				<li><a href="registration.php">Registration</a></li>
-				<li><a href="survey-response.php">Survey Response</a></li>
 				<li><a href="https://github.com/Varin6033/Business-Contact-List">Git Hub</a></li>
 			</ul> 
 		</nav>	
 		
 		<!----header---->
 		<header>
-			<image id="logo" src="image/surveys_and_polls.jpg"></img>
+			<image id="logo" src="image/logo.png"></img>
 		</header>
 		
 		<div class="container">
@@ -46,30 +45,23 @@ $db = new PDO($dsn, $username, $password);
 			<p>In this web page ,anonymous user can give response any survey.</p>		
 			
 		</aside>
-		
+		<?php
+			if(isset($_GET["questions_id"]))
+			{
+				$id = $_GET['questions_id']  ;
+				$query1="SELECT * FROM questions where `questions_id`='$id'";
+				$result=$db->query($query1); 
+				$res = $result->fetch();
+			}
+		?> 
 		<!---section---->
-		
-				<?php
-							if(isset($_GET["questions_id"]))
-							{
-							
-								$id = $_GET['questions_id']  ;
-								$query1="SELECT * FROM questions where `questions_id`='$id'";
-								$result=$db->query($query1); 
-							
-								$res = $result->fetch();
-								;?>
-								
-				<?php
-							}
-				?> 
 		<section id="content">
 			<div class="inside">
 				<h3>Surveys</h3>
 				<hr>
 					<h4>Survey On this website</h4>
 					
-				<form action="insert2.php" method="post">
+				<form action="answer_db.php" method="post">
 			<tr>
 				<td>Question1:<?php echo $res['title']."</br>";?></td>
 			<tr>
@@ -99,8 +91,8 @@ $db = new PDO($dsn, $username, $password);
 			</tr>
 			<br/><br/><br/>
 			Question2:This website is fully user friendly.<br/>
-			<input type="radio" name="radGender" value="male"/>Disagree
-			<input type="radio" name="radGender" value="Female"/>Agree
+			<input type="radio" name="radChoice" value="Disagree"/>Disagree
+			<input type="radio" name="radChoice" value="Agree"/>Agree
 			<?php
 			if(isset($_SESSION['err_Gender']))
 			{
@@ -131,6 +123,7 @@ $db = new PDO($dsn, $username, $password);
 	
 		<!---footer---->
 		<footer>		
+	
 		<div id="copyright">Copyright By:Varin Upadhyay, Gurneet Saggu and Paras Shrama</div>
 		</footer>
 </body>

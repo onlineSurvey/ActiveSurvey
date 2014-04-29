@@ -1,8 +1,8 @@
-<!----File name:index.php--->
-<!-----Author's name:Gurneet Saggu--->
+<!----File name:create-survey.php--->
+<!-----Author's name:Paras Sharma--->
 <!-----Website Name:VGP Site Survey--->
-<!-------http://localhost/Project/index.html---->
-<!-------File Description: This is the index file of this project--->
+<!-----http://localhost/Final%20Project/create-survey.php---->
+<!-----File Description:This is the login file of creating survey--->
 <?php
 session_start();
 ?>
@@ -12,7 +12,7 @@ session_start();
 	<title>Online Survey</title>
 </head>
 <body>
-	<div id="container1">
+   <div id="container1">
 		<!----nav---->
 		<nav>
 			<ul >
@@ -36,15 +36,14 @@ session_start();
 			<h2>Welcome to Online Survey</h2>
 			<hr>
 			<h3>Hello my freinds,</h3>
-			<p>By visiting this website, you can participate in online survey. Not only participate, but also you can create your own survey.</p>		
-			<p>For creating survey, you should fill this registration form.So you wii have your username and password.</p>
-			<p>Anonymous user can also participate in this survey.</p>
+			<p>In this web page, user can create the survey by entering the username and password.</p>		
+			
 		</aside>
 		
 		<!---section---->
 		<section id="content">
 			<div id="banner">
-				<form id="feedback-form" action="login_db.php" method="post">
+				<form id="feedback-form" action="create-survey-process.php" method="post">
 				<h2>Login</h2>
 				<fieldset>
 				<div class="field">
@@ -68,13 +67,14 @@ session_start();
 					unset($_SESSION['err_msg']);
 				}
 				?> 
+				</div>
+			</section>
 			</div>
-		</section>
 		</div>
-	</div>
 	
 		<!---footer---->
-		<footer>		
+		<footer>	
+	
 		<div id="copyright">Copyright By:Varin Upadhyay, Gurneet Saggu and Paras Shrama</div>
 		</footer>
 </body>
