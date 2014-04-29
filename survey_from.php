@@ -21,7 +21,7 @@ session_start();
 				<li><a href="response.php">Response Survey</a></li>
 				<li><a href="registration.php">Registration</a></li>
 				<li><a href="response.php">Survey Response</a></li>
-				<li><a href="https://github.com/Varin6033/Business-Contact-List">Git Hub</a></li>
+				<li><a href="https://github.com/onlineSurvey/ActiveSurvey">Git Hub</a></li>
 			</ul> 
 		</nav>	
 		
